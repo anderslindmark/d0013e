@@ -4,16 +4,16 @@ apt-get install -y tmux vim nginx make openjdk-7-jre
 
 # mips-sde
 mkdir /software
-tar xjf /vagrant/mips-sde.tar-06.61.bz2 -C /software/
+tar xjf /vagrant/provision/mips-sde.tar-06.61.bz2 -C /software/
 ln -s /software/mips-sde/06.61 /software/mips-sde/current
 
 # SyncSim
-cp /vagrant/SyncSim.jar ~vagrant/
+cp /vagrant/provision/SyncSim.jar ~vagrant/
 
 # course files
-tar xjf /vagrant/d0013e_dist.tar.bz2 -C ~vagrant/
-tar xjf /vagrant/coursepage.tar.bz2 -C ~vagrant/
-cp /vagrant/coursepage_nginx_conf /etc/nginx/sites-enabled/default
+tar xjf /vagrant/provision/d0013e_dist.tar.bz2 -C ~vagrant/
+tar xjf /vagrant/provision/coursepage.tar.bz2 -C ~vagrant/
+cp /vagrant/provision/coursepage_nginx_conf /etc/nginx/sites-enabled/default
 /etc/init.d/nginx restart
 
 echo "export PATH='/software/mips-sde/current/bin:$PATH'" >> ~vagrant/.bashrc
