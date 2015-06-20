@@ -12,3 +12,5 @@ vagrant up
 vagrant ssh -- -Y
 ```
 and then you can compile the labs and use SyncSim etc.
+
+The coursepage mirror can be accessed from http://localhost:8123/
