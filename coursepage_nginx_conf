@@ -1,0 +1,8 @@
+server {
+	root /home/vagrant/coursepage/www.sm.luth.se/csee/courses/smd/D0013E;
+	index index.html;
+	server_name localhost;
+	location / {
+		try_files $uri $uri/ /index.html;
+	}
+}
